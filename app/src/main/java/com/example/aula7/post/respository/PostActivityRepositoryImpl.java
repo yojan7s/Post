@@ -39,7 +39,9 @@ public class PostActivityRepositoryImpl implements PostActivityRepository {
 
             @Override
             public void onFailure(Call<List<Post>> call, Throwable t) {
-
+                for (Post i:postList){
+                    System.out.println("\n"+i.getTitle());
+                }
             }
         });
     }
